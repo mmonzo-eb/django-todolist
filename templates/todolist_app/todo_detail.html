@@ -1,0 +1,10 @@
+{% load bootstrap4 %}
+
+<h1>{{ object.title }}</h1>
+<p>{{ object.description }}</p>
+<p>Done: {{ object.done }}</p>
+<p>Priority: {{ object.priority }}</p>
+<p>Created: {{ object.created|date }} by {{ object.created_by }}</p>
+<p>Updated: {{ object.updated|date }} by {{ object.updated_by }}</p>
+<p>Assigned to: {{ object.assigned_user }}</p>
+<a href="{% url 'todo_list' %}">Mis Tareas</a>

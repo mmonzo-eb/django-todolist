@@ -1,0 +1,19 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load bootstrap_pagination %}
+{% bootstrap_paginate page_obj range=10 show_prev_next="true" show_first_last="true" first_label="First" last_label="Last"%}
+
+<h1>Todo List</h1>
+<ul>
+{% for todo in object_list %}
+    <li>{{ todo.id }}:  {{ todo.title }} - {{ todo.done }}  
+        <a href="{% url 'todo_update' todo.id %}">Edit</a>
+        <a href="{% url 'todo_delete' todo.id %}">Delete</a>
+        <a href="{% url 'todo_reassign' todo.id %}">Reassign</a>
+    </li>
+{% empty %}
+    <li>No todo yet.</li>
+{% endfor %}
+<a href="{% url 'todo_create' %}">Create</a>
+<a href="{% url 'logout' %}">Logout</a>
+</ul>

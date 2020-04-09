@@ -1,0 +1,8 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete <b>"{{ object.title }}</b>"?</p>
+    <input type="submit" value="Yes" class="btn btn-danger"/>
+    <a href="{% url 'todo_list' %}" class="btn btn-primary">No</a>
+</form>

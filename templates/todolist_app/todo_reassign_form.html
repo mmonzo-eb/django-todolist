@@ -1,0 +1,12 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
+<body>
+    <form method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <button type="submit" class="btn btn-secondary">Update</button>
+        {% endbuttons %}
+    </form>
+</body>
