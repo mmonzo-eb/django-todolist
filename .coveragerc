@@ -1,15 +1,17 @@
 [run]
 source =
-    todolist_app
+    todolist_app/models.py
+    todolist_app/views.py
 
 omit =
     env/*
     templates/*
-    todolist_app/migrations/*
-    todolist_app/urls
-    todolist_app/apps
-    todolist_app/admin
+    todolist/*
+    todolist_app/admin.py
+    todolist_app/apps.py
+    todolist_app/urls.py
     */test*
+    manage.py
 
 [report]
 exclude_lines =
