@@ -7,6 +7,8 @@ omit =
     env/*
     templates/*
     todolist/*
+    todolist_app/migrations/*
+    todolist_app/__init__.py
     todolist_app/admin.py
     todolist_app/apps.py
     todolist_app/urls.py
